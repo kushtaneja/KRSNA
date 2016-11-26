@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C41DE99FC800F41854 /* AppDelegate.swift */; };
+		43C5D5C71DE99FC800F41854 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C61DE99FC800F41854 /* FirstViewController.swift */; };
+		43C5D5C91DE99FC800F41854 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C81DE99FC800F41854 /* SecondViewController.swift */; };
+		43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CA1DE99FC800F41854 /* Main.storyboard */; };
+		43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CD1DE99FC800F41854 /* Assets.xcassets */; };
+		43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */; };
+		43C5D5DC1DE99FC800F41854 /* KRSNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5DB1DE99FC800F41854 /* KRSNATests.swift */; };
+		43C5D5E71DE99FC800F41854 /* KRSNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43C5D5D81DE99FC800F41854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C5D5B91DE99FC800F41854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C5D5C01DE99FC800F41854;
+			remoteInfo = KRSNA;
+		};
+		43C5D5E31DE99FC800F41854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C5D5B91DE99FC800F41854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C5D5C01DE99FC800F41854;
+			remoteInfo = KRSNA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43C5D5C11DE99FC800F41854 /* KRSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C5D5C41DE99FC800F41854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43C5D5C61DE99FC800F41854 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		43C5D5C81DE99FC800F41854 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		43C5D5CB1DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43C5D5CD1DE99FC800F41854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43C5D5D01DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43C5D5D21DE99FC800F41854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C5D5D71DE99FC800F41854 /* KRSNATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KRSNATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C5D5DB1DE99FC800F41854 /* KRSNATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRSNATests.swift; sourceTree = "<group>"; };
+		43C5D5DD1DE99FC800F41854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C5D5E21DE99FC800F41854 /* KRSNAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KRSNAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRSNAUITests.swift; sourceTree = "<group>"; };
+		43C5D5E81DE99FC800F41854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43C5D5BE1DE99FC800F41854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5D41DE99FC800F41854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5DF1DE99FC800F41854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43C5D5B81DE99FC800F41854 = {
+			isa = PBXGroup;
+			children = (
+				43C5D5C31DE99FC800F41854 /* KRSNA */,
+				43C5D5DA1DE99FC800F41854 /* KRSNATests */,
+				43C5D5E51DE99FC800F41854 /* KRSNAUITests */,
+				43C5D5C21DE99FC800F41854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43C5D5C21DE99FC800F41854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43C5D5C11DE99FC800F41854 /* KRSNA.app */,
+				43C5D5D71DE99FC800F41854 /* KRSNATests.xctest */,
+				43C5D5E21DE99FC800F41854 /* KRSNAUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43C5D5C31DE99FC800F41854 /* KRSNA */ = {
+			isa = PBXGroup;
+			children = (
+				43C5D5C41DE99FC800F41854 /* AppDelegate.swift */,
+				43C5D5C61DE99FC800F41854 /* FirstViewController.swift */,
+				43C5D5C81DE99FC800F41854 /* SecondViewController.swift */,
+				43C5D5CA1DE99FC800F41854 /* Main.storyboard */,
+				43C5D5CD1DE99FC800F41854 /* Assets.xcassets */,
+				43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */,
+				43C5D5D21DE99FC800F41854 /* Info.plist */,
+			);
+			path = KRSNA;
+			sourceTree = "<group>";
+		};
+		43C5D5DA1DE99FC800F41854 /* KRSNATests */ = {
+			isa = PBXGroup;
+			children = (
+				43C5D5DB1DE99FC800F41854 /* KRSNATests.swift */,
+				43C5D5DD1DE99FC800F41854 /* Info.plist */,
+			);
+			path = KRSNATests;
+			sourceTree = "<group>";
+		};
+		43C5D5E51DE99FC800F41854 /* KRSNAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */,
+				43C5D5E81DE99FC800F41854 /* Info.plist */,
+			);
+			path = KRSNAUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43C5D5C01DE99FC800F41854 /* KRSNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C5D5EB1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNA" */;
+			buildPhases = (
+				43C5D5BD1DE99FC800F41854 /* Sources */,
+				43C5D5BE1DE99FC800F41854 /* Frameworks */,
+				43C5D5BF1DE99FC800F41854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KRSNA;
+			productName = KRSNA;
+			productReference = 43C5D5C11DE99FC800F41854 /* KRSNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43C5D5D61DE99FC800F41854 /* KRSNATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C5D5EE1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNATests" */;
+			buildPhases = (
+				43C5D5D31DE99FC800F41854 /* Sources */,
+				43C5D5D41DE99FC800F41854 /* Frameworks */,
+				43C5D5D51DE99FC800F41854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43C5D5D91DE99FC800F41854 /* PBXTargetDependency */,
+			);
+			name = KRSNATests;
+			productName = KRSNATests;
+			productReference = 43C5D5D71DE99FC800F41854 /* KRSNATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43C5D5E11DE99FC800F41854 /* KRSNAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C5D5F11DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNAUITests" */;
+			buildPhases = (
+				43C5D5DE1DE99FC800F41854 /* Sources */,
+				43C5D5DF1DE99FC800F41854 /* Frameworks */,
+				43C5D5E01DE99FC800F41854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43C5D5E41DE99FC800F41854 /* PBXTargetDependency */,
+			);
+			name = KRSNAUITests;
+			productName = KRSNAUITests;
+			productReference = 43C5D5E21DE99FC800F41854 /* KRSNAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43C5D5B91DE99FC800F41854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Kush Taneja";
+				TargetAttributes = {
+					43C5D5C01DE99FC800F41854 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JTK792GD3V;
+						ProvisioningStyle = Automatic;
+					};
+					43C5D5D61DE99FC800F41854 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JTK792GD3V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43C5D5C01DE99FC800F41854;
+					};
+					43C5D5E11DE99FC800F41854 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JTK792GD3V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43C5D5C01DE99FC800F41854;
+					};
+				};
+			};
+			buildConfigurationList = 43C5D5BC1DE99FC800F41854 /* Build configuration list for PBXProject "KRSNA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43C5D5B81DE99FC800F41854;
+			productRefGroup = 43C5D5C21DE99FC800F41854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43C5D5C01DE99FC800F41854 /* KRSNA */,
+				43C5D5D61DE99FC800F41854 /* KRSNATests */,
+				43C5D5E11DE99FC800F41854 /* KRSNAUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43C5D5BF1DE99FC800F41854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */,
+				43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */,
+				43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5D51DE99FC800F41854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5E01DE99FC800F41854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43C5D5BD1DE99FC800F41854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C5D5C91DE99FC800F41854 /* SecondViewController.swift in Sources */,
+				43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */,
+				43C5D5C71DE99FC800F41854 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5D31DE99FC800F41854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C5D5DC1DE99FC800F41854 /* KRSNATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C5D5DE1DE99FC800F41854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C5D5E71DE99FC800F41854 /* KRSNAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43C5D5D91DE99FC800F41854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C5D5C01DE99FC800F41854 /* KRSNA */;
+			targetProxy = 43C5D5D81DE99FC800F41854 /* PBXContainerItemProxy */;
+		};
+		43C5D5E41DE99FC800F41854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C5D5C01DE99FC800F41854 /* KRSNA */;
+			targetProxy = 43C5D5E31DE99FC800F41854 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43C5D5CA1DE99FC800F41854 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43C5D5CB1DE99FC800F41854 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43C5D5D01DE99FC800F41854 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43C5D5E91DE99FC800F41854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43C5D5EA1DE99FC800F41854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43C5D5EC1DE99FC800F41854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		43C5D5ED1DE99FC800F41854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		43C5D5EF1DE99FC800F41854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KRSNA.app/KRSNA";
+			};
+			name = Debug;
+		};
+		43C5D5F01DE99FC800F41854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KRSNA.app/KRSNA";
+			};
+			name = Release;
+		};
+		43C5D5F21DE99FC800F41854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KRSNA;
+			};
+			name = Debug;
+		};
+		43C5D5F31DE99FC800F41854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JTK792GD3V;
+				INFOPLIST_FILE = KRSNAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KRSNA;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43C5D5BC1DE99FC800F41854 /* Build configuration list for PBXProject "KRSNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C5D5E91DE99FC800F41854 /* Debug */,
+				43C5D5EA1DE99FC800F41854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C5D5EB1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C5D5EC1DE99FC800F41854 /* Debug */,
+				43C5D5ED1DE99FC800F41854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43C5D5EE1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C5D5EF1DE99FC800F41854 /* Debug */,
+				43C5D5F01DE99FC800F41854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43C5D5F11DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C5D5F21DE99FC800F41854 /* Debug */,
+				43C5D5F31DE99FC800F41854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43C5D5B91DE99FC800F41854 /* Project object */;
+}
