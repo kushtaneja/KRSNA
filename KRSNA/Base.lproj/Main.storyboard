@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.23137254900000001" green="0.08235294118" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="mCP-U2-g0C" kind="relationship" relationship="viewControllers" id="YRF-Ki-MSV"/>
@@ -76,7 +77,7 @@
                                             <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="TAL-CW-R3x">
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="TAL-CW-R3x">
                                             <rect key="frame" x="18" y="5" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -105,7 +106,7 @@
         <!--Post Display View Controller-->
         <scene sceneID="fUF-Z0-f9z">
             <objects>
-                <viewController storyboardIdentifier="PostDisplayViewController" id="GVc-9K-0HN" customClass="PostDisplayViewController" customModule="KRSNA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDisplayViewController" automaticallyAdjustsScrollViewInsets="NO" id="GVc-9K-0HN" customClass="PostDisplayViewController" customModule="KRSNA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mzh-uV-ppm"/>
                         <viewControllerLayoutGuide type="bottom" id="CZM-1w-4Xn"/>
@@ -114,7 +115,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-Y4-F3C">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J30-e7-Wvo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GVc-9K-0HN" id="vLV-cW-zpR"/>
+                                </connections>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qk-e6-4nS" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="-130" width="375" height="797"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="nn"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-Y4-F3C">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -122,21 +136,21 @@
                                 <rect key="frame" x="32" y="156" width="202" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5f-Gz-Fyl">
                                 <rect key="frame" x="32" y="182" width="304" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="296" translatesAutoresizingMaskIntoConstraints="NO" id="Sgk-li-neh">
-                                <rect key="frame" x="40" y="296" width="296" height="300"/>
+                                <rect key="frame" x="40" y="296" width="296" height="351"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iL-E3-ZId">
@@ -150,7 +164,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al4-1P-D6C">
-                                <rect key="frame" x="331" y="41" width="17.5" height="18"/>
+                                <rect key="frame" x="331" y="41" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Share">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,16 +177,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RnJ-vI-PxI"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
                     <connections>
                         <outlet property="postCategoryLabel" destination="7E6-lH-lQo" id="6nZ-6c-OzY"/>
                         <outlet property="postContentLabel" destination="Sgk-li-neh" id="r7S-0K-O06"/>
                         <outlet property="postImageView" destination="Dbv-Y4-F3C" id="W1r-LV-SRN"/>
                         <outlet property="postTitleLabel" destination="i5f-Gz-Fyl" id="lDO-JP-KVj"/>
+                        <outlet property="scrollView" destination="J30-e7-Wvo" id="nYQ-jo-Fms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSs-Zo-luh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4742" y="-672"/>
+            <point key="canvasLocation" x="4741.6000000000004" y="-672.41379310344837"/>
         </scene>
         <!--About Table View Controller-->
         <scene sceneID="EOg-si-FaA">
@@ -225,7 +241,7 @@
         <scene sceneID="d2t-IG-39O">
             <objects>
                 <navigationController title="Krishna" automaticallyAdjustsScrollViewInsets="NO" id="mCP-U2-g0C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Krishna" image="ic_krishna" id="za1-5x-rlh"/>
+                    <tabBarItem key="tabBarItem" title="Krishna" image="ic_krishna (1)" id="za1-5x-rlh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" translucent="NO" id="gbD-tL-jfE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -274,7 +290,7 @@
                                             <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="YfL-1k-OZa">
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="YfL-1k-OZa">
                                             <rect key="frame" x="18" y="5" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -305,10 +321,10 @@
             <objects>
                 <navigationController storyboardIdentifier="PostDisplayNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PwL-bq-Ulm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="9Tq-Xe-et6">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" id="9Tq-Xe-et6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -322,9 +338,10 @@
     </scenes>
     <resources>
         <image name="Back" width="36" height="32"/>
-        <image name="Rectangle 3" width="1080" height="810"/>
+        <image name="Rectangle" width="1080" height="810"/>
         <image name="Share" width="54" height="57"/>
-        <image name="ic_krishna" width="26" height="26"/>
+        <image name="ic_krishna" width="23" height="23"/>
+        <image name="ic_krishna (1)" width="21" height="23"/>
     </resources>
     <color key="tintColor" red="0.23137254900000001" green="0.08235294118" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

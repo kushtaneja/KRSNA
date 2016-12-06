@@ -60,6 +60,7 @@ class ExploreTableViewController: UITableViewController {
         debugPrint("\(post.title) postAddedtoTableView")
         cell.postTitleLabel.text = post.title
         cell.postDescriptionLabel.text = post.description
+        cell.postThumbnailView.sd_setImage(with: NSURL(string: post.url!) as URL!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
         // Configure the cell...
         
         return cell
@@ -69,6 +70,18 @@ class ExploreTableViewController: UITableViewController {
         let height = CGFloat(integerLiteral: 80)
         return height
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let postDisplayNavigationScreen = UIStoryboard.postDisplayNavigationScreen()
+        let postDisplayScreen = postDisplayNavigationScreen.topViewController as! PostDisplayViewController
+        let head = "EXPLORE KRISHNA"
+        postDisplayScreen.postCategory = head
+        postDisplayScreen.postTitle = vrindavanPosts[indexPath.row].title
+        postDisplayScreen.postContent = vrindavanPosts[indexPath.row].description
+        postDisplayScreen.postUrl =  vrindavanPosts[indexPath.row].url
+        UIApplication.topViewController()?.present(postDisplayNavigationScreen, animated: true, completion: nil)
+        
+    }
+
     
     
     /*

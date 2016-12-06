@@ -104,6 +104,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - FirebaseUI (~> 1.0)
+  - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -130,6 +131,6 @@ SPEC CHECKSUMS:
   TwitterCore: a8aea8bdaf2abd6572c8f264707a4ea4dc2d0eab
   TwitterKit: d38c08d31dfd4ba604f95deca6cf8e174b5cbd96
 
-PODFILE CHECKSUM: e60f6df55fa9d981e8633bbe7e1510001bd53627
+PODFILE CHECKSUM: 6aea71d637e944836458aa15d8519a0e86b8e49d
 
 COCOAPODS: 1.1.1

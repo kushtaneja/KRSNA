@@ -24,9 +24,9 @@
 		433E17E71DF6154B0079075D /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */; };
 		435A80281DF2E87700ED983E /* LoginAndSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A80271DF2E87700ED983E /* LoginAndSignUpViewController.swift */; };
 		439166551DF624F500BC8D97 /* PostDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439166541DF624F500BC8D97 /* PostDisplayViewController.swift */; };
+		439166571DF64EE200BC8D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439166561DF64EE200BC8D97 /* Assets.xcassets */; };
 		43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C41DE99FC800F41854 /* AppDelegate.swift */; };
 		43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CA1DE99FC800F41854 /* Main.storyboard */; };
-		43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CD1DE99FC800F41854 /* Assets.xcassets */; };
 		43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */; };
 		43C5D5DC1DE99FC800F41854 /* KRSNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5DB1DE99FC800F41854 /* KRSNATests.swift */; };
 		43C5D5E71DE99FC800F41854 /* KRSNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */; };
@@ -75,10 +75,10 @@
 		435A80271DF2E87700ED983E /* LoginAndSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndSignUpViewController.swift; sourceTree = "<group>"; };
 		436F1BFE1DE9BE0800B4F2D4 /* KRSNA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KRSNA.entitlements; sourceTree = "<group>"; };
 		439166541DF624F500BC8D97 /* PostDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDisplayViewController.swift; sourceTree = "<group>"; };
+		439166561DF64EE200BC8D97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C5D5C11DE99FC800F41854 /* KRSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C5D5C41DE99FC800F41854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C5D5CB1DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		43C5D5CD1DE99FC800F41854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C5D5D01DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C5D5D21DE99FC800F41854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C5D5D71DE99FC800F41854 /* KRSNATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KRSNATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,7 +284,7 @@
 				432CDDAD1DF1CB4B0016C4F2 /* Views */,
 				432CDDAE1DF1CB580016C4F2 /* Controllers */,
 				433E17C11DF5EFE30079075D /* Services */,
-				43C5D5CD1DE99FC800F41854 /* Assets.xcassets */,
+				439166561DF64EE200BC8D97 /* Assets.xcassets */,
 				433E17D21DF5FA8B0079075D /* Utilities */,
 				433E17DC1DF6003D0079075D /* Supporting Files */,
 				43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */,
@@ -450,7 +450,7 @@
 			files = (
 				43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */,
 				43C5D5F71DE9A18100F41854 /* GoogleService-Info.plist in Resources */,
-				43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */,
+				439166571DF64EE200BC8D97 /* Assets.xcassets in Resources */,
 				43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

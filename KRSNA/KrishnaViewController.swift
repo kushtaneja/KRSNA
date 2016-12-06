@@ -48,7 +48,7 @@ class KrishnaViewController: UIViewController,CAPSPageMenuDelegate{
             
         ]
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame:  CGRect(x: 0.0, y: 0.0
-            , width: self.view.frame.width, height: self.view.frame.height - 44.0
+            , width: self.view.frame.width, height: self.view.frame.height - 60.0
         ), pageMenuOptions: parameters)
         
         //pageMenu?.menuItemFont = UIFont(name: "Roboto-Regular", size: 15)!

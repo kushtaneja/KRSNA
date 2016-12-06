@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class StoriesTableViewController: UITableViewController {
     var posts = [post]()
     var vrindavanPosts = [post]()
+    let postImageView: UIImageView? = nil
     var ref: FIRDatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,9 @@ class StoriesTableViewController: UITableViewController {
         debugPrint("\(post.title) postAddedtoTableView")
         cell.postTitleLabel.text = post.title
         cell.postDescriptionLabel.text = post.description
+        cell.postThumbnailView.sd_setImage(with: NSURL(string: post.url!) as URL!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
+        
+        
         // Configure the cell...
 
         return cell
@@ -77,6 +82,7 @@ class StoriesTableViewController: UITableViewController {
         postDisplayScreen.postCategory = head
         postDisplayScreen.postTitle = vrindavanPosts[indexPath.row].title
         postDisplayScreen.postContent = vrindavanPosts[indexPath.row].description
+        postDisplayScreen.postUrl =  vrindavanPosts[indexPath.row].url
         UIApplication.topViewController()?.present(postDisplayNavigationScreen, animated: true, completion: nil)
         
     }

@@ -7,6 +7,7 @@ target 'KRSNA' do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'FirebaseUI', '~> 1.0'
+    pod 'SDWebImage', '~>3.8'
   # Pods for KRSNA
 
   target 'KRSNATests' do

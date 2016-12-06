@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PostDisplayViewController: UIViewController {
 
@@ -18,9 +19,14 @@ class PostDisplayViewController: UIViewController {
     
     @IBOutlet weak var postContentLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var postTitle: String?
     var postCategory: String?
     var postContent: String?
+    var postUrl: String?
+    var contentRect = CGRect.zero
+
     
     
     override func viewDidLoad() {
@@ -28,8 +34,13 @@ class PostDisplayViewController: UIViewController {
         self.postContentLabel?.text = postContent
         self.postTitleLabel?.text = postTitle
         self.postCategoryLabel?.text = postCategory
+        self.postImageView.sd_setImage(with: NSURL(string: self.postUrl!) as URL!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
         
-
+        for view in self.scrollView.subviews {
+            contentRect.union(view.frame)
+        }
+        self.scrollView.contentSize = contentRect.size
+        self.scrollView.autoresizingMask = UIViewAutoresizing.flexibleHeight
         // Do any additional setup after loading the view.
     }
 
@@ -42,7 +53,8 @@ class PostDisplayViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    /*
+    
+            /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
