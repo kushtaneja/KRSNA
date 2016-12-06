@@ -1,0 +1,6 @@
+framework module Pods_KRSNAUITests {
+  umbrella header "Pods-KRSNAUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

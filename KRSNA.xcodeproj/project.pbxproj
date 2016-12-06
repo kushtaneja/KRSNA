@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1524B5E7013E6DE0A301CB6B /* Pods_KRSNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC84CF006505303F613A88A /* Pods_KRSNA.framework */; };
+		433E17C31DF5EFF50079075D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C21DF5EFF50079075D /* Post.swift */; };
+		433E17C61DF5FA0F0079075D /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C41DF5FA0F0079075D /* ColorCode.swift */; };
+		433E17C71DF5FA0F0079075D /* ColorCodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C51DF5FA0F0079075D /* ColorCodeExtensions.swift */; };
+		433E17CA1DF5FA400079075D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C91DF5FA400079075D /* Extensions.swift */; };
+		433E17CD1DF5FA610079075D /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17CC1DF5FA610079075D /* CAPSPageMenu.swift */; };
+		433E17D01DF5FA750079075D /* DeviceSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17CF1DF5FA750079075D /* DeviceSizes.swift */; };
+		433E17D41DF5FAA80079075D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17D31DF5FAA80079075D /* Toast.swift */; };
+		433E17D71DF5FAC40079075D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17D61DF5FAC40079075D /* ActivityIndicator.swift */; };
+		433E17D91DF5FACC0079075D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17D81DF5FACC0079075D /* Utils.swift */; };
+		433E17DE1DF6006B0079075D /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17DD1DF6006B0079075D /* FetchData.swift */; };
+		433E17E11DF60C0F0079075D /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17E01DF60C0F0079075D /* ExploreTableViewController.swift */; };
+		433E17E31DF60C2A0079075D /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17E21DF60C2A0079075D /* AboutTableViewController.swift */; };
+		433E17E51DF60C6C0079075D /* KrishnaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17E41DF60C6C0079075D /* KrishnaViewController.swift */; };
+		433E17E71DF6154B0079075D /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */; };
+		435A80281DF2E87700ED983E /* LoginAndSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A80271DF2E87700ED983E /* LoginAndSignUpViewController.swift */; };
+		439166551DF624F500BC8D97 /* PostDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439166541DF624F500BC8D97 /* PostDisplayViewController.swift */; };
 		43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C41DE99FC800F41854 /* AppDelegate.swift */; };
-		43C5D5C71DE99FC800F41854 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C61DE99FC800F41854 /* FirstViewController.swift */; };
-		43C5D5C91DE99FC800F41854 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5C81DE99FC800F41854 /* SecondViewController.swift */; };
 		43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CA1DE99FC800F41854 /* Main.storyboard */; };
 		43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CD1DE99FC800F41854 /* Assets.xcassets */; };
 		43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */; };
 		43C5D5DC1DE99FC800F41854 /* KRSNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5DB1DE99FC800F41854 /* KRSNATests.swift */; };
 		43C5D5E71DE99FC800F41854 /* KRSNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */; };
+		43C5D5F51DE9A04E00F41854 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5D5F41DE9A04E00F41854 /* StoriesTableViewController.swift */; };
+		43C5D5F71DE9A18100F41854 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */; };
+		43C5D5F81DE9A18100F41854 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */; };
+		43C5D5F91DE9A18100F41854 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */; };
+		9A5518D20395E5FC101F30DA /* Pods_KRSNATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69FFB0F33E8946CBD5114C4 /* Pods_KRSNATests.framework */; };
+		FDAB39C2CB11D999EFD14F13 /* Pods_KRSNAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46F2112AEF0D95694D80BBD /* Pods_KRSNAUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +56,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CC7C10222A06087D54E72B2 /* Pods-KRSNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.release.xcconfig"; sourceTree = "<group>"; };
+		299F3282634495017D811380 /* Pods-KRSNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.debug.xcconfig"; sourceTree = "<group>"; };
+		433E17C21DF5EFF50079075D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		433E17C41DF5FA0F0079075D /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
+		433E17C51DF5FA0F0079075D /* ColorCodeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCodeExtensions.swift; sourceTree = "<group>"; };
+		433E17C91DF5FA400079075D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		433E17CC1DF5FA610079075D /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		433E17CF1DF5FA750079075D /* DeviceSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSizes.swift; sourceTree = "<group>"; };
+		433E17D31DF5FAA80079075D /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		433E17D61DF5FAC40079075D /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		433E17D81DF5FACC0079075D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		433E17DD1DF6006B0079075D /* FetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		433E17E01DF60C0F0079075D /* ExploreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
+		433E17E21DF60C2A0079075D /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		433E17E41DF60C6C0079075D /* KrishnaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KrishnaViewController.swift; sourceTree = "<group>"; };
+		433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
+		435A80271DF2E87700ED983E /* LoginAndSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndSignUpViewController.swift; sourceTree = "<group>"; };
+		436F1BFE1DE9BE0800B4F2D4 /* KRSNA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KRSNA.entitlements; sourceTree = "<group>"; };
+		439166541DF624F500BC8D97 /* PostDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDisplayViewController.swift; sourceTree = "<group>"; };
 		43C5D5C11DE99FC800F41854 /* KRSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C5D5C41DE99FC800F41854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43C5D5C61DE99FC800F41854 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		43C5D5C81DE99FC800F41854 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		43C5D5CB1DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43C5D5CD1DE99FC800F41854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C5D5D01DE99FC800F41854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +87,15 @@
 		43C5D5E21DE99FC800F41854 /* KRSNAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KRSNAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C5D5E61DE99FC800F41854 /* KRSNAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRSNAUITests.swift; sourceTree = "<group>"; };
 		43C5D5E81DE99FC800F41854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C5D5F41DE9A04E00F41854 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45CFFD40B6D5733F5F457070 /* Pods-KRSNAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNAUITests/Pods-KRSNAUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7A071772A021830826AF781 /* Pods-KRSNATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNATests/Pods-KRSNATests.release.xcconfig"; sourceTree = "<group>"; };
+		ACC84CF006505303F613A88A /* Pods_KRSNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRSNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA066B71919F29CBE42CBFD8 /* Pods-KRSNAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNAUITests/Pods-KRSNAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F46F2112AEF0D95694D80BBD /* Pods_KRSNAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRSNAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69FFB0F33E8946CBD5114C4 /* Pods_KRSNATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRSNATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1CF5CF7614573957471273 /* Pods-KRSNATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNATests/Pods-KRSNATests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1524B5E7013E6DE0A301CB6B /* Pods_KRSNA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5518D20395E5FC101F30DA /* Pods_KRSNATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +119,141 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAB39C2CB11D999EFD14F13 /* Pods_KRSNAUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA09A3AE29A25932A065052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACC84CF006505303F613A88A /* Pods_KRSNA.framework */,
+				F69FFB0F33E8946CBD5114C4 /* Pods_KRSNATests.framework */,
+				F46F2112AEF0D95694D80BBD /* Pods_KRSNAUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		432CDDAD1DF1CB4B0016C4F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43C5D5CA1DE99FC800F41854 /* Main.storyboard */,
+				43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		432CDDAE1DF1CB580016C4F2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				433E17E81DF615520079075D /* TableViewCells */,
+				433E17DF1DF60BDE0079075D /* Krishna */,
+				435A80271DF2E87700ED983E /* LoginAndSignUpViewController.swift */,
+				439166541DF624F500BC8D97 /* PostDisplayViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		432CDDAF1DF1CB730016C4F2 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				436F1BFE1DE9BE0800B4F2D4 /* KRSNA.entitlements */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		433E17C11DF5EFE30079075D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				433E17DD1DF6006B0079075D /* FetchData.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		433E17C81DF5FA130079075D /* ColorCode */ = {
+			isa = PBXGroup;
+			children = (
+				433E17C51DF5FA0F0079075D /* ColorCodeExtensions.swift */,
+				433E17C41DF5FA0F0079075D /* ColorCode.swift */,
+			);
+			name = ColorCode;
+			sourceTree = "<group>";
+		};
+		433E17CB1DF5FA480079075D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				433E17C91DF5FA400079075D /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		433E17CE1DF5FA650079075D /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				433E17CC1DF5FA610079075D /* CAPSPageMenu.swift */,
+			);
+			name = PageMenu;
+			sourceTree = "<group>";
+		};
+		433E17D21DF5FA8B0079075D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				433E17D51DF5FAB00079075D /* Toast */,
+				433E17CE1DF5FA650079075D /* PageMenu */,
+				433E17CB1DF5FA480079075D /* Extensions */,
+				433E17C81DF5FA130079075D /* ColorCode */,
+				433E17DB1DF5FAF40079075D /* ActivityIndicator */,
+				433E17CF1DF5FA750079075D /* DeviceSizes.swift */,
+				433E17D81DF5FACC0079075D /* Utils.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		433E17D51DF5FAB00079075D /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				433E17D31DF5FAA80079075D /* Toast.swift */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
+		433E17DB1DF5FAF40079075D /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				433E17D61DF5FAC40079075D /* ActivityIndicator.swift */,
+			);
+			name = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		433E17DC1DF6003D0079075D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				433E17C21DF5EFF50079075D /* Post.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		433E17DF1DF60BDE0079075D /* Krishna */ = {
+			isa = PBXGroup;
+			children = (
+				433E17E41DF60C6C0079075D /* KrishnaViewController.swift */,
+				43C5D5F41DE9A04E00F41854 /* StoriesTableViewController.swift */,
+				433E17E01DF60C0F0079075D /* ExploreTableViewController.swift */,
+				433E17E21DF60C2A0079075D /* AboutTableViewController.swift */,
+			);
+			name = Krishna;
+			sourceTree = "<group>";
+		};
+		433E17E81DF615520079075D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		43C5D5B81DE99FC800F41854 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +261,8 @@
 				43C5D5DA1DE99FC800F41854 /* KRSNATests */,
 				43C5D5E51DE99FC800F41854 /* KRSNAUITests */,
 				43C5D5C21DE99FC800F41854 /* Products */,
+				AE849F3C1F33E476ED749003 /* Pods */,
+				3FA09A3AE29A25932A065052 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +280,14 @@
 			isa = PBXGroup;
 			children = (
 				43C5D5C41DE99FC800F41854 /* AppDelegate.swift */,
-				43C5D5C61DE99FC800F41854 /* FirstViewController.swift */,
-				43C5D5C81DE99FC800F41854 /* SecondViewController.swift */,
-				43C5D5CA1DE99FC800F41854 /* Main.storyboard */,
+				432CDDAF1DF1CB730016C4F2 /* Modals */,
+				432CDDAD1DF1CB4B0016C4F2 /* Views */,
+				432CDDAE1DF1CB580016C4F2 /* Controllers */,
+				433E17C11DF5EFE30079075D /* Services */,
 				43C5D5CD1DE99FC800F41854 /* Assets.xcassets */,
-				43C5D5CF1DE99FC800F41854 /* LaunchScreen.storyboard */,
+				433E17D21DF5FA8B0079075D /* Utilities */,
+				433E17DC1DF6003D0079075D /* Supporting Files */,
+				43C5D5F61DE9A18100F41854 /* GoogleService-Info.plist */,
 				43C5D5D21DE99FC800F41854 /* Info.plist */,
 			);
 			path = KRSNA;
@@ -128,6 +311,19 @@
 			path = KRSNAUITests;
 			sourceTree = "<group>";
 		};
+		AE849F3C1F33E476ED749003 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				299F3282634495017D811380 /* Pods-KRSNA.debug.xcconfig */,
+				1CC7C10222A06087D54E72B2 /* Pods-KRSNA.release.xcconfig */,
+				FE1CF5CF7614573957471273 /* Pods-KRSNATests.debug.xcconfig */,
+				A7A071772A021830826AF781 /* Pods-KRSNATests.release.xcconfig */,
+				45CFFD40B6D5733F5F457070 /* Pods-KRSNAUITests.debug.xcconfig */,
+				BA066B71919F29CBE42CBFD8 /* Pods-KRSNAUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43C5D5EB1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNA" */;
 			buildPhases = (
+				CB3725C6193357EF95B6748E /* [CP] Check Pods Manifest.lock */,
 				43C5D5BD1DE99FC800F41854 /* Sources */,
 				43C5D5BE1DE99FC800F41854 /* Frameworks */,
 				43C5D5BF1DE99FC800F41854 /* Resources */,
+				CBAA9EC7D22EEE200BD2B403 /* [CP] Embed Pods Frameworks */,
+				966D2C274913EA8AB885013B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43C5D5EE1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNATests" */;
 			buildPhases = (
+				C0D32066DDA185D7E908D78F /* [CP] Check Pods Manifest.lock */,
 				43C5D5D31DE99FC800F41854 /* Sources */,
 				43C5D5D41DE99FC800F41854 /* Frameworks */,
 				43C5D5D51DE99FC800F41854 /* Resources */,
+				C2872C53019BED02F314E1C5 /* [CP] Embed Pods Frameworks */,
+				51F9B0E07A33F7F239FE8DF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43C5D5F11DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNAUITests" */;
 			buildPhases = (
+				304AC99CA7D6E07D7EDD6260 /* [CP] Check Pods Manifest.lock */,
 				43C5D5DE1DE99FC800F41854 /* Sources */,
 				43C5D5DF1DE99FC800F41854 /* Frameworks */,
 				43C5D5E01DE99FC800F41854 /* Resources */,
+				0357B129C0524A1CA2028AA0 /* [CP] Embed Pods Frameworks */,
+				4D5232FD879E4CB5CE44CDF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +403,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = JTK792GD3V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					43C5D5D61DE99FC800F41854 = {
 						CreatedOnToolsVersion = 8.1;
@@ -239,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C5D5D11DE99FC800F41854 /* LaunchScreen.storyboard in Resources */,
+				43C5D5F71DE9A18100F41854 /* GoogleService-Info.plist in Resources */,
 				43C5D5CE1DE99FC800F41854 /* Assets.xcassets in Resources */,
 				43C5D5CC1DE99FC800F41854 /* Main.storyboard in Resources */,
 			);
@@ -248,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C5D5F81DE9A18100F41854 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,19 +467,173 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C5D5F91DE9A18100F41854 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0357B129C0524A1CA2028AA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNAUITests/Pods-KRSNAUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		304AC99CA7D6E07D7EDD6260 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D5232FD879E4CB5CE44CDF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNAUITests/Pods-KRSNAUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51F9B0E07A33F7F239FE8DF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNATests/Pods-KRSNATests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		966D2C274913EA8AB885013B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0D32066DDA185D7E908D78F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2872C53019BED02F314E1C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNATests/Pods-KRSNATests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB3725C6193357EF95B6748E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBAA9EC7D22EEE200BD2B403 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43C5D5BD1DE99FC800F41854 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C5D5C91DE99FC800F41854 /* SecondViewController.swift in Sources */,
 				43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */,
-				43C5D5C71DE99FC800F41854 /* FirstViewController.swift in Sources */,
+				433E17C31DF5EFF50079075D /* Post.swift in Sources */,
+				43C5D5F51DE9A04E00F41854 /* StoriesTableViewController.swift in Sources */,
+				435A80281DF2E87700ED983E /* LoginAndSignUpViewController.swift in Sources */,
+				433E17E71DF6154B0079075D /* StoriesTableViewCell.swift in Sources */,
+				433E17E11DF60C0F0079075D /* ExploreTableViewController.swift in Sources */,
+				433E17E51DF60C6C0079075D /* KrishnaViewController.swift in Sources */,
+				433E17C71DF5FA0F0079075D /* ColorCodeExtensions.swift in Sources */,
+				433E17D71DF5FAC40079075D /* ActivityIndicator.swift in Sources */,
+				433E17C61DF5FA0F0079075D /* ColorCode.swift in Sources */,
+				433E17CD1DF5FA610079075D /* CAPSPageMenu.swift in Sources */,
+				439166551DF624F500BC8D97 /* PostDisplayViewController.swift in Sources */,
+				433E17D41DF5FAA80079075D /* Toast.swift in Sources */,
+				433E17CA1DF5FA400079075D /* Extensions.swift in Sources */,
+				433E17E31DF60C2A0079075D /* AboutTableViewController.swift in Sources */,
+				433E17DE1DF6006B0079075D /* FetchData.swift in Sources */,
+				433E17D01DF5FA750079075D /* DeviceSizes.swift in Sources */,
+				433E17D91DF5FACC0079075D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,12 +783,16 @@
 		};
 		43C5D5EC1DE99FC800F41854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 299F3282634495017D811380 /* Pods-KRSNA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KRSNA/KRSNA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JTK792GD3V;
 				INFOPLIST_FILE = KRSNA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krsna.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,12 +800,16 @@
 		};
 		43C5D5ED1DE99FC800F41854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC7C10222A06087D54E72B2 /* Pods-KRSNA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KRSNA/KRSNA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = JTK792GD3V;
 				INFOPLIST_FILE = KRSNA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.KRSNA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krsna.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -443,6 +817,7 @@
 		};
 		43C5D5EF1DE99FC800F41854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE1CF5CF7614573957471273 /* Pods-KRSNATests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +833,7 @@
 		};
 		43C5D5F01DE99FC800F41854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A071772A021830826AF781 /* Pods-KRSNATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +849,7 @@
 		};
 		43C5D5F21DE99FC800F41854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45CFFD40B6D5733F5F457070 /* Pods-KRSNAUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JTK792GD3V;
@@ -487,6 +864,7 @@
 		};
 		43C5D5F31DE99FC800F41854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA066B71919F29CBE42CBFD8 /* Pods-KRSNAUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JTK792GD3V;
@@ -518,6 +896,7 @@
 				43C5D5ED1DE99FC800F41854 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C5D5EE1DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNATests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +905,7 @@
 				43C5D5F01DE99FC800F41854 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C5D5F11DE99FC800F41854 /* Build configuration list for PBXNativeTarget "KRSNAUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +914,7 @@
 				43C5D5F31DE99FC800F41854 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

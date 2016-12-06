@@ -1,0 +1,6 @@
+framework module Pods_KRSNA {
+  umbrella header "Pods-KRSNA-umbrella.h"
+
+  export *
+  module * { export * }
+}
