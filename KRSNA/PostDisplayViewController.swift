@@ -8,9 +8,10 @@
 
 import UIKit
 import SDWebImage
+import SKPhotoBrowser
 
-class PostDisplayViewController: UIViewController {
-
+class PostDisplayViewController: UIViewController,UIScrollViewDelegate{
+    
     @IBOutlet weak var postImageView: UIImageView!
     
     @IBOutlet weak var postTitleLabel: UILabel!
@@ -26,15 +27,28 @@ class PostDisplayViewController: UIViewController {
     var postContent: String?
     var postUrl: String?
     var contentRect = CGRect.zero
-
+    var imageViews = [SKPhoto]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+        //        scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+        //        scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
+        
         self.postContentLabel?.text = postContent
         self.postTitleLabel?.text = postTitle
         self.postCategoryLabel?.text = postCategory
-        self.postImageView.sd_setImage(with: NSURL(string: self.postUrl!) as URL!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
+        self.postImageView.sd_setImage(with: URL(string: self.postUrl!)!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
+        let photo = SKPhoto.photoWithImageURL(self.postUrl!)
+        photo.shouldCachePhotoURLImage = true // you can use image cache by true(NSCache)
+        self.imageViews.append(photo)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.ShowGalleryImageViewController(_:)))
+         self.postImageView.isUserInteractionEnabled = true
+         self.postImageView.addGestureRecognizer(tapGesture)
         
         for view in self.scrollView.subviews {
             contentRect.union(view.frame)
@@ -43,25 +57,26 @@ class PostDisplayViewController: UIViewController {
         self.scrollView.autoresizingMask = UIViewAutoresizing.flexibleHeight
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func ShowGalleryImageViewController(_ sender: UITapGestureRecognizer) {
+    
+        let browser = SKPhotoBrowser(photos: imageViews)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
 
+    }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-            /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+

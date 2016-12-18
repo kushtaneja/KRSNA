@@ -16,7 +16,27 @@ extension UIStoryboard {
     
     class func postDisplayNavigationScreen() -> UINavigationController {
         return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "PostDisplayNavigationController") as? UINavigationController)!
+        
     }
+    
+    class func AllPostsNavigationScreen() -> UIViewController {
+        return KRSNAMainStoryboard().instantiateViewController(withIdentifier: "AllPostsNavigationController")
+    }
+    
+    class func ChapterVersesListScreen() -> UIViewController {
+        return KRSNAMainStoryboard().instantiateViewController(withIdentifier: "ChapterVersesTableViewController")
+    }
+    
+    class func GitaNavigationScreen() -> UINavigationController {
+            return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "GitaNavigationController") as? UINavigationController)!
+        
+    }
+
+    
+    
+    
+    
+    
     
 
 }

@@ -95,6 +95,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SKPhotoBrowser (3.1.3)
   - TwitterCore (2.6.1):
     - Fabric
   - TwitterKit (2.6.1):
@@ -105,6 +106,17 @@ DEPENDENCIES:
   - Firebase/Database
   - FirebaseUI (~> 1.0)
   - SDWebImage (~> 3.8)
+  - SKPhotoBrowser (from `https://github.com/suzuki-0000/SKPhotoBrowser.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  SKPhotoBrowser:
+    :branch: swift3
+    :git: https://github.com/suzuki-0000/SKPhotoBrowser.git
+
+CHECKOUT OPTIONS:
+  SKPhotoBrowser:
+    :commit: 2b51155541dcf95a32917a9a610f851630fa4e41
+    :git: https://github.com/suzuki-0000/SKPhotoBrowser.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -128,9 +140,10 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SKPhotoBrowser: 4690ffb59db79849454241ecc65cc3d6af9965bf
   TwitterCore: a8aea8bdaf2abd6572c8f264707a4ea4dc2d0eab
   TwitterKit: d38c08d31dfd4ba604f95deca6cf8e174b5cbd96
 
-PODFILE CHECKSUM: 6aea71d637e944836458aa15d8519a0e86b8e49d
+PODFILE CHECKSUM: 711c4c3780930dd1db054fc2df239920f5dd7cd3
 
 COCOAPODS: 1.1.1

@@ -9,7 +9,6 @@
 import UIKit
 
 class KrishnaViewController: UIViewController,CAPSPageMenuDelegate{
-    
     var pageMenu : CAPSPageMenu?
     let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
     var controllerArray : [UIViewController] = []
@@ -18,7 +17,9 @@ class KrishnaViewController: UIViewController,CAPSPageMenuDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Making Page View Controllers
+        self.navigationItem.title = "Krishna"
         var controller : UIViewController = UIViewController()
+        self.view.backgroundColor = UIColor.white
         
         controller = storyBoard.instantiateViewController(withIdentifier: "StoriesTableViewController")
         controller.title = "Stories"
@@ -29,6 +30,13 @@ class KrishnaViewController: UIViewController,CAPSPageMenuDelegate{
         controller = storyBoard.instantiateViewController(withIdentifier: "AboutTableViewController")
         controller.title = "About"
         controllerArray.append(controller)
+        controller = storyBoard.instantiateViewController(withIdentifier: "NamesCollectionViewController")
+        controller.title = "Names"
+        controllerArray.append(controller)
+        controller = storyBoard.instantiateViewController(withIdentifier: "QuotesCollectionViewController")
+        controller.title = "Quotes"
+        controllerArray.append(controller)
+        
         
         
         let parameters: [CAPSPageMenuOption] = [
@@ -42,13 +50,13 @@ class KrishnaViewController: UIViewController,CAPSPageMenuDelegate{
             .selectedMenuItemLabelColor(UIColor.white),
             .selectedItemBackgroundColor(UIColor.clear),
             .unSelectedMenuItemBackgroundColor(UIColor.clear),
-            .canChangePageOnHorizontalScroll(false),
+            .canChangePageOnHorizontalScroll(true),
             .addBottomMenuHairline(true),
-            .bottomMenuHairlineColor(UIColor(rgb: 0xeeeeee))
+            .bottomMenuHairlineColor(UIColor.white)
             
         ]
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame:  CGRect(x: 0.0, y: 0.0
-            , width: self.view.frame.width, height: self.view.frame.height - 60.0
+            , width: self.view.frame.width, height: self.view.frame.height - 30.0
         ), pageMenuOptions: parameters)
         
         //pageMenu?.menuItemFont = UIFont(name: "Roboto-Regular", size: 15)!

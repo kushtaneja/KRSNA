@@ -8,6 +8,7 @@ target 'KRSNA' do
     pod 'Firebase/Database'
     pod 'FirebaseUI', '~> 1.0'
     pod 'SDWebImage', '~>3.8'
+    pod 'SKPhotoBrowser', :git => 'https://github.com/suzuki-0000/SKPhotoBrowser.git', :branch => 'swift3'
   # Pods for KRSNA
 
   target 'KRSNATests' do
