@@ -11,103 +11,119 @@ import Firebase
 
 private let reuseIdentifier = "ChapterVersesDisplayCollectionViewCell"
 
-class ChapterVersesDisplayCollectionViewController: UICollectionViewController,UITableViewDelegate,UITableViewDataSource{
+class ChapterVersesDisplayCollectionViewController: UICollectionViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSourcePrefetching{
     var verses = [verse]()
-    var ref: FIRDatabaseReference!
+    
     var selectedVerse: Int = 0
     var chapter: String = "Chapter"
     var currentVerse: verse?
     var nextVerse: verse?
     var initalCount: Int = 0
-    var currentCell: ChapterVersesDisplayCollectionViewCell?
+    var visibleVerseCell: ChapterVersesDisplayCollectionViewCell?
     var selectedKey: Int = 0
+    var number: Int = 0
+    var added: Bool = false
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.reloadData()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
+        self.collectionView?.prefetchDataSource = self
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-       updateChapterContent(offset: selectedKey,index: 0)
-     
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
     
     
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return verses.count
+        if (verses.count != 0){
+            return number
+        } else{
+            return 0
+        }
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChapterVersesDisplayCollectionViewCell
-        
-        currentCell = cell
-        currentVerse = verses[indexPath.row]
-        nextVerse = (verses[indexPath.row+1] != nil) ? verses[indexPath.row+1] : nil
-        
-        self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((currentVerse?.number)!)"
-        
-        cell.verseOverviewTextView.text = currentVerse?.verse
+        cell.currentVerse = verses[indexPath.row]
+        cell.nextVerse = (indexPath.row != self.number-1) || (indexPath.row != self.number-2) ? verses[indexPath.row+1] : nextVerse
         cell.tableView.delegate = self
         cell.tableView.dataSource = self
         cell.tableView.tableFooterView = UIView(frame: CGRect.zero)
         cell.tableView.estimatedRowHeight = 106.0
         cell.verseOverviewTextView.autoresizingMask = UIViewAutoresizing.flexibleHeight
-        cell.tableView.reloadData()
+        
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]){
+        
+        for indexPath in indexPaths {
+            debugPrint("Updating Prefetch for \(indexPath.row) \n")
+            self.updateChapterContent(offset: selectedKey,index: indexPath.row,prefetch:true)
+        }
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]){
+        
+        for indexPath in indexPaths {
+            debugPrint("Cancelling Prefetch for \(indexPath.row) \n")
+            verses.remove(at: indexPath.row)
+        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-     //   let previousIndexPath = IndexPath(item: indexPath.item-2, section: 0)
-       
         
-       debugPrint("WILL DISPLAY ***\(self.nextVerse?.number)\n")
-       // self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((currentVerse?.number)!)"
+        let cell = cell as! ChapterVersesDisplayCollectionViewCell
         
+        currentVerse = cell.currentVerse
+        nextVerse = cell.nextVerse
+        self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((cell.currentVerse?.number)!)"
+        cell.tableView.reloadData()
+        cell.verseOverviewTextView.text = cell.currentVerse?.verse
         
     }
     
     override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         
-        //self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((currentVerse?.number)!)"
-       debugPrint("DID END DISPLAYING \n")
-        currentCell?.tableView.reloadData()
     }
     
     
     
     //MARK: FIREBASE
     
-    func updateChapterContent(offset:Int,index:Int? = 0){
+    func updateChapterContent(offset:Int,index:Int? = 0,prefetch:Bool){
         
         self.initalCount = self.verses.count
         debugPrint("AAAAAA**** \(initalCount)")
         ActivityIndicator.shared.showProgressView(uiView: self.view)
+        let ref: FIRDatabaseReference! = FIRDatabase.database().reference()
         
-        ref = FIRDatabase.database().reference()
+//        ref.keepSynced(true)
         var i: Int = index!
-        let query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryStarting(atValue: String(offset + index!)).queryEnding(atValue: String(offset + index! + 1))
-    
+        var query: FIRDatabaseQuery!
+        
+        if (index! == self.number-1){
+             query = ref.child("new_bgasitis").child("versedetails").queryEqual(toValue: String(offset + index!))
+        } else{
+             query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryStarting(atValue: String(offset + index!)).queryEnding(atValue: String(offset + index! + 1))
+        }
+        
         
         var handle: UInt = query.observe(.childAdded, with:  { (snapshot) in
             
@@ -124,12 +140,19 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
             
             debugPrint("VERSEEE ---- \n audioUrl\(audioUrl)\n purport\(purport)\n imageUrl\(imageUrl)\n translation\(translation)\n verseNumber\(verseNumber)\n verseContent\(verseContent)\n wordForWord\(wordForWord)")
             
-             self.verses.insert(currentverse, at: i)
-             i+=1
-            
-           if ((i-index!) == 2){
-                self.collectionView?.reloadData()
+            if (!(self.verses.contains(where: { $0.number == currentverse.number }))) {
+                debugPrint("IT DOES NOT CONTAINS \(currentverse.number!)")
+                self.verses.insert(currentverse, at: i)
+                self.added = true
             }
+            else{
+                debugPrint("IT CONTAINS")
+            }
+            i+=1
+            
+//            if (!prefetch){
+//                self.collectionView?.reloadData()
+//            }
             debugPrint("BBBBBB*** \(self.verses.count)")
             ActivityIndicator.shared.hideProgressView()
             
@@ -139,21 +162,30 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
         debugPrint("CCCCCC*** \(self.verses.count)")
         
     }
-
-
+    
+    
     @IBAction func didBackPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         
     }
     //MARK: TableView Delegates
     func numberOfSections(in tableView: UITableView) -> Int{
-        
-        return 2
-        
+        switch self.VisibleCellIndexPath() {
+        case self.number-1:
+            return 1
+        default:
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat(20)
+        switch section {
+        case 0:
+            return CGFloat(20)
+        default:
+            return CGFloat(0)
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -210,7 +242,6 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         debugPrint("AA gya function")
-        
         switch indexPath.section {
         case 0:
             tableView.allowsSelection = false
@@ -243,43 +274,51 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return UITableViewAutomaticDimension
+        return UITableViewAutomaticDimension
     }
-
+    
+    func VisibleCellIndexPath()->Int{
+        
+        let visibleCells = collectionView?.indexPathsForVisibleItems
+        for indexPath in visibleCells! {
+            return indexPath.row
+        }
+        return 0
+    }
     
     
-
+    
     // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
-
+    /*
+     // Uncomment this method to specify if the specified item should be highlighted during tracking
+     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment this method to specify if the specified item should be selected
+     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+     
+     }
+     */
+    
 }
 
 

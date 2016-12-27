@@ -44,8 +44,9 @@ class verse {
         chapter = (verseChapter != nil || verseChapter != "") ? verseChapter! : nil
         number = (verseNumber != nil) ? verseNumber! : nil
         verse = (verseContent != nil || verseContent != "") ? verseContent! : nil 
-        audioUrl = (verseAudioUrl != nil || verseAudioUrl != "") ? URL(string: verseAudioUrl!)! : nil
-        imageUrl = (verseImageUrl != nil || verseImageUrl != "") ? URL(string: verseImageUrl!)! : nil
+        audioUrl = (verseAudioUrl == nil || verseAudioUrl! == "") ? URL(string: "google.com")! : URL(string: verseAudioUrl!)!
+        imageUrl = (verseImageUrl == nil || verseImageUrl! == "") ? URL(string: "google.com")! : URL(string: verseImageUrl!)!
+
     
     }
     

@@ -207,7 +207,8 @@ class ChapterVersesTableViewController: UITableViewController {
             
             verseDisplayScreen.selectedVerse = self.offset+cell.verseNumber!
             verseDisplayScreen.selectedKey = cell.verseNumber!
-            
+            verseDisplayScreen.number = verses.count - 1
+            verseDisplayScreen.updateChapterContent(offset: cell.verseNumber!,index: 0,prefetch: false)
             UIApplication.topViewController()?.present(verseDisplayNavigationScreen, animated: true, completion: nil)
         
         }

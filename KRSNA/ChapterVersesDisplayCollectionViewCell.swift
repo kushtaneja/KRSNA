@@ -18,6 +18,8 @@ class ChapterVersesDisplayCollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var headerView: UIView!
 
     var contentRect = CGRect.zero
+    var currentVerse: verse?
+    var nextVerse: verse?
     
     override func awakeFromNib() {
         super.awakeFromNib()

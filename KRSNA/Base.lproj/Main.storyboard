@@ -703,11 +703,11 @@ Bhaktivedanta Swami Prabhupada.</string>
         <scene sceneID="k7y-Zl-8zt">
             <objects>
                 <collectionViewController storyboardIdentifier="ChapterVersesDisplayCollectionViewController" id="xGH-6E-x2C" customClass="ChapterVersesDisplayCollectionViewController" customModule="KRSNA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" dataMode="prototypes" id="Qbn-9D-kC1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" dataMode="prototypes" id="Qbn-9D-kC1">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K02-Xa-vxD">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="K02-Xa-vxD">
                             <size key="itemSize" width="375" height="603"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
