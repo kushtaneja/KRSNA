@@ -879,7 +879,7 @@ Bhaktivedanta Swami Prabhupada.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5D-Bo-Jlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5516" y="2657"/>
+            <point key="canvasLocation" x="5554" y="2657"/>
         </scene>
         <!--Names Collection View Controller-->
         <scene sceneID="8tA-Ky-ZRI">
@@ -924,7 +924,6 @@ Bhaktivedanta Swami Prabhupada.</string>
                         <connections>
                             <outlet property="dataSource" destination="Tff-Ev-hOL" id="9kf-IV-J9e"/>
                             <outlet property="delegate" destination="Tff-Ev-hOL" id="oVv-no-FsL"/>
-                            <outlet property="prefetchDataSource" destination="Tff-Ev-hOL" id="Df7-nS-sCs"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>
@@ -1062,7 +1061,6 @@ Bhaktivedanta Swami Prabhupada.</string>
                         <connections>
                             <outlet property="dataSource" destination="3wI-PU-ARg" id="eBs-NG-laj"/>
                             <outlet property="delegate" destination="3wI-PU-ARg" id="M6e-OO-vam"/>
-                            <outlet property="prefetchDataSource" destination="3wI-PU-ARg" id="PMQ-aW-VT5"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>
@@ -1113,7 +1111,6 @@ Bhaktivedanta Swami Prabhupada.</string>
                         <connections>
                             <outlet property="dataSource" destination="pjf-qd-PuX" id="I2d-va-3sq"/>
                             <outlet property="delegate" destination="pjf-qd-PuX" id="vyA-QA-yTJ"/>
-                            <outlet property="prefetchDataSource" destination="pjf-qd-PuX" id="3ro-BA-CRJ"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>
@@ -1201,7 +1198,7 @@ Bhaktivedanta Swami Prabhupada.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xGH-6E-x2C" kind="relationship" relationship="rootViewController" id="x7H-C2-SB1"/>
+                        <segue destination="xGH-6E-x2C" kind="relationship" relationship="rootViewController" id="Xaz-nf-vBJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWZ-Sm-OeN" userLabel="First Responder" sceneMemberID="firstResponder"/>

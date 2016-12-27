@@ -11,8 +11,7 @@ import Firebase
 
 private let reuseIdentifier = "ChapterVersesDisplayCollectionViewCell"
 
-class ChapterVersesDisplayCollectionViewController: UICollectionViewController, UICollectionViewDataSourcePrefetching,UITableViewDelegate,UITableViewDataSource{
-    
+class ChapterVersesDisplayCollectionViewController: UICollectionViewController,UITableViewDelegate,UITableViewDataSource{
     var verses = [verse]()
     var ref: FIRDatabaseReference!
     var selectedVerse: Int = 0
@@ -26,18 +25,18 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint("View Did Load")
-        collectionView?.prefetchDataSource = self
-        collectionView?.reloadData()
-       
+        
+        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-       
+        debugPrint("INITIAL COUNT \(self.verses.count)")
+        debugPrint("INITAL OFFSET \(selectedVerse)")
+        updateChapterContent(offset: selectedKey)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,19 +58,10 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController, 
         // #warning Incomplete implementation, return the number of items
         return verses.count
     }
-    
-
-    
-    
-    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        debugPrint("CELL AT ITEM ")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChapterVersesDisplayCollectionViewCell
         currentCell = cell
-    
-            
         currentVerse = verses[indexPath.row]
         nextVerse = (verses[indexPath.row+1] != nil) ? verses[indexPath.row+1] : nil
         
@@ -88,7 +78,7 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController, 
         return cell
     }
     
-  /*  override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
      //   let previousIndexPath = IndexPath(item: indexPath.item-2, section: 0)
        
         
@@ -101,43 +91,23 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController, 
     override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         
         //self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((currentVerse?.number)!)"
-        debugPrint("DID END DISPLAYING \n")
+       debugPrint("DID END DISPLAYING \n")
         currentCell?.tableView.reloadData()
     }
-    */
     
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]){
-        debugPrint("CELL PREFETCH")
-        for indexPath in indexPaths{
-            updateChapterContent(offset: selectedKey, indexPath: indexPath, isCanceled: false)
-        }
-    }
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]){
-        for indexPath in indexPaths{
-            updateChapterContent(offset: selectedKey, indexPath: indexPath, isCanceled: true)
-        }
-    }
     
     
     //MARK: FIREBASE
     
-    func updateChapterContent(offset:Int,indexPath:IndexPath,isCanceled: Bool){
+    func updateChapterContent(offset:Int){
         
         self.initalCount = self.verses.count
         debugPrint("AAAAAA**** \(initalCount)")
-        if (isCanceled){
-            verses.remove(at: indexPath.row)
-        }
-        else{
-            
         ActivityIndicator.shared.showProgressView(uiView: self.view)
         
         ref = FIRDatabase.database().reference()
         
-        let query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryEqual(toValue: String(offset+indexPath.row))
-        
-        
-       // queryOrderedByKey().queryStarting(atValue: String(offset+indexPath.row)).queryEnding(atValue: String(offset+indexPath.row+1))
+        let query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryStarting(atValue: String(offset)).queryEnding(atValue: String(offset+1))
     
         
         var handle: UInt = query.observe(.childAdded, with:  { (snapshot) in
@@ -153,24 +123,22 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController, 
             
             let currentverse = verse(verseNumber: verseNumber, verseAudioUrl: audioUrl, verseContent: verseContent, verseWordForWord: wordForWord, verseTranslation: translation, versePurport: purport, verseChapter: self.chapter, verseImageUrl: imageUrl)
             
-            debugPrint("PREFETCHED VERSEEE ---- \n audioUrl\(audioUrl)\n purport\(purport)\n imageUrl\(imageUrl)\n translation\(translation)\n verseNumber\(verseNumber)\n verseContent\(verseContent)\n wordForWord\(wordForWord)")
+            debugPrint("VERSEEE ---- \n audioUrl\(audioUrl)\n purport\(purport)\n imageUrl\(imageUrl)\n translation\(translation)\n verseNumber\(verseNumber)\n verseContent\(verseContent)\n wordForWord\(wordForWord)")
             
-            self.verses.insert(currentverse, at: indexPath.row)
-            self.collectionView?.reloadData()
-
-         //   if ((self.verses.count-self.initalCount) == 3){
-                          // }
+            self.verses.insert(currentverse, at: self.verses.count)
+            if ((self.verses.count-self.initalCount) == 2){
+                self.collectionView?.reloadData()
+            }
             debugPrint("BBBBBB*** \(self.verses.count)")
             ActivityIndicator.shared.hideProgressView()
             
         }) { (error) in
             print(error.localizedDescription)
         }
-        }
         debugPrint("CCCCCC*** \(self.verses.count)")
         
     }
-   
+
 
     @IBAction func didBackPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
