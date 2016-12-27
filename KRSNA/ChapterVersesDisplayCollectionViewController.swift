@@ -25,8 +25,7 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        collectionView?.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,9 +33,8 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        debugPrint("INITIAL COUNT \(self.verses.count)")
-        debugPrint("INITAL OFFSET \(selectedVerse)")
-        updateChapterContent(offset: selectedKey)
+       updateChapterContent(offset: selectedKey,index: 0)
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,11 +58,12 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChapterVersesDisplayCollectionViewCell
+        
         currentCell = cell
         currentVerse = verses[indexPath.row]
         nextVerse = (verses[indexPath.row+1] != nil) ? verses[indexPath.row+1] : nil
-        
         
         self.navigationItem.title = self.chapter + " - " + "Verse" + " " + "\((currentVerse?.number)!)"
         
@@ -99,15 +98,15 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
     
     //MARK: FIREBASE
     
-    func updateChapterContent(offset:Int){
+    func updateChapterContent(offset:Int,index:Int? = 0){
         
         self.initalCount = self.verses.count
         debugPrint("AAAAAA**** \(initalCount)")
         ActivityIndicator.shared.showProgressView(uiView: self.view)
         
         ref = FIRDatabase.database().reference()
-        
-        let query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryStarting(atValue: String(offset)).queryEnding(atValue: String(offset+1))
+        var i: Int = index!
+        let query = ref.child("new_bgasitis").child("versedetails").queryOrderedByKey().queryStarting(atValue: String(offset + index!)).queryEnding(atValue: String(offset + index! + 1))
     
         
         var handle: UInt = query.observe(.childAdded, with:  { (snapshot) in
@@ -125,8 +124,10 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
             
             debugPrint("VERSEEE ---- \n audioUrl\(audioUrl)\n purport\(purport)\n imageUrl\(imageUrl)\n translation\(translation)\n verseNumber\(verseNumber)\n verseContent\(verseContent)\n wordForWord\(wordForWord)")
             
-            self.verses.insert(currentverse, at: self.verses.count)
-            if ((self.verses.count-self.initalCount) == 2){
+             self.verses.insert(currentverse, at: i)
+             i+=1
+            
+           if ((i-index!) == 2){
                 self.collectionView?.reloadData()
             }
             debugPrint("BBBBBB*** \(self.verses.count)")
