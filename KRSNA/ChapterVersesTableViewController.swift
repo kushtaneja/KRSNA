@@ -18,27 +18,22 @@ class ChapterVersesTableViewController: UITableViewController {
     var ref: FIRDatabaseReference!
     var chapter: String = "Chapter"
     var verses = [verse]()
+    var changedChapter: String = "Chapter"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        changedChapter = chapter
         self.navigationItem.title = chapter
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-        
-        
-        
         ActivityIndicator.shared.showProgressView(uiView: view)
-        
-        
+        self.tableView.reloadData()
+       // updateChapterContent(From: offset, To: to)
     }
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(true)
         
-        updateChapterContent(From: offset, To: to)
-        
-        ActivityIndicator.shared.showProgressView(uiView: view)
         
     }
 
@@ -80,6 +75,16 @@ class ChapterVersesTableViewController: UITableViewController {
         return sectionHeaderView
     }
     
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return CGFloat(20)
+        default:
+            return CGFloat(0)
+        }
+        
+    }
+    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -97,17 +102,19 @@ class ChapterVersesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            if (verses.count > 0)
-            {
-            return verses.count
-            } else {
-            return 0
+        if (verses.count > 0) {
+            tableView.sectionHeaderHeight = CGFloat(integerLiteral: 30)
+            tableView.sectionFooterHeight = CGFloat(integerLiteral: 10)
+            
+            switch section {
+            case 0:
+                return 1
+            case 1:
+                return verses.count - 1
+            default:
+                return 0
             }
-        default:
+        } else {
             return 0
         }
     }
@@ -119,19 +126,28 @@ class ChapterVersesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChapterVerseTableViewCell", for: indexPath) as! ChapterVerseTableViewCell
         
-        
-       
-        
         switch indexPath.section {
             
         case 0:
-            cell.verseHeadingLabel.text = ""
-            cell.verseTranlsationLabel.text = ""
+            if ((indexPath.row) == 0)
+            {
+            let verse = self.verses[indexPath.row]
+            cell.isUserInteractionEnabled = false
+            cell.verseHeadingLabel.text = verse.verse
+                
+            cell.verseTranlsationLabel.text = verse.translation
             return cell
-
+            }
+            else {
+                cell.verseHeadingLabel.text = ""
+                cell.verseTranlsationLabel.text = ""
+                return cell
+            }
         case 1:
-             let verse = self.verses[indexPath.row]
+             let verse = self.verses[indexPath.row + 1]
+                cell.verseNumber = verse.key
                 cell.verseHeadingLabel.text = "Verse" + " " + "\((verse.number)!)"
+             
                 cell.verseTranlsationLabel.text = verse.translation
             return cell
         default:
@@ -158,25 +174,51 @@ class ChapterVersesTableViewController: UITableViewController {
         
         var handle: UInt = query.observe(.childAdded, with:  { (snapshot) in
             
+            let key = Int(snapshot.key)
             let output = snapshot.value as? NSDictionary
+            
             let translation = output?["translation"] as? String
             let verseNumber = output?["versenumber"] as? Int
+            let verseContent = output?["verse"] as? String
+
+            let currentverse = verse(verseNumber: verseNumber!, verseTranslation: translation, verseChapter: self.chapter,verseContent:verseContent,atKey: key)
             
-            let currentverse = verse(verseNumber: verseNumber! + 1, verseTranslation: translation, verseChapter: self.chapter)
             self.verses.insert(currentverse, at: self.verses.count)
             
-            
-            debugPrint("Verse \(currentverse.number)  Fetched")
             self.tableView.reloadData()
+            debugPrint("Verse \(currentverse.number!)  Fetched a key \(key)")
+            
             ActivityIndicator.shared.hideProgressView()
            
-            
-            
-            
         }) { (error) in
             print(error.localizedDescription)
         }
        
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if (indexPath.section == 1){
+            
+            let cell = tableView.cellForRow(at: indexPath) as! ChapterVerseTableViewCell
+            
+            let verseDisplayNavigationScreen = UIStoryboard.verseDisplayNavigationScreen()
+            let verseDisplayScreen = verseDisplayNavigationScreen.topViewController as! ChapterVersesDisplayCollectionViewController
+            verseDisplayScreen.chapter = self.chapter
+            
+            verseDisplayScreen.selectedVerse = self.offset+cell.verseNumber!
+            verseDisplayScreen.selectedKey = cell.verseNumber!
+            
+            UIApplication.topViewController()?.present(verseDisplayNavigationScreen, animated: true, completion: nil)
+        
+        }
+        
+        
+    }
+    
+    
+    @IBAction func didBackPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        
     }
 
     

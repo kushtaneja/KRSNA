@@ -31,6 +31,13 @@ extension UIStoryboard {
             return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "GitaNavigationController") as? UINavigationController)!
         
     }
+    class func verseListNavigationScreen()-> UINavigationController {
+                return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "VerseListNavigationController") as? UINavigationController)!
+    }
+    class func verseDisplayNavigationScreen()-> UINavigationController {
+        return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "VersesDisplayNavigationController") as? UINavigationController)!
+    }
+    
 
     
     

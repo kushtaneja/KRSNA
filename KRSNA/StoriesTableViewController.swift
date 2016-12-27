@@ -63,6 +63,8 @@ class StoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        
         let sectionHeaderView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: 30.0))
         sectionHeaderView.layer.backgroundColor = UIColor.white.cgColor
         let label = UILabel(frame: CGRect(x: 15.0, y: 5.0, width: self.view.frame.width, height: 20.0))

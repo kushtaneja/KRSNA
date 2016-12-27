@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 import SKPhotoBrowser
 
-class PostDisplayViewController: UIViewController,UIScrollViewDelegate{
+class PostDisplayViewController: UIViewController,UIScrollViewDelegate,UITextViewDelegate{
     
     @IBOutlet weak var postImageView: UIImageView!
     
@@ -19,6 +19,8 @@ class PostDisplayViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var postCategoryLabel: UILabel!
     
     @IBOutlet weak var postContentLabel: UILabel!
+    
+    @IBOutlet weak var postContentTextView: UITextView!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -38,7 +40,7 @@ class PostDisplayViewController: UIViewController,UIScrollViewDelegate{
         //        scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
         //        scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
         
-        self.postContentLabel?.text = postContent
+        self.postContentTextView.text = postContent
         self.postTitleLabel?.text = postTitle
         self.postCategoryLabel?.text = postCategory
         self.postImageView.sd_setImage(with: URL(string: self.postUrl!)!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))

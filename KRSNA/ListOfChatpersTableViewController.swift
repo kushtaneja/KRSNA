@@ -9,27 +9,21 @@
 import UIKit
 import Firebase
 
-class ListOfChatpersTableViewController: UITableViewController {
+
+class ListOfChatpersTableViewController: UITableViewController{
         var chapters = [chapter]()
         var ref: FIRDatabaseReference!
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            
             self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-            
-            self.updateAndReturnChapters()
             ActivityIndicator.shared.showProgressView(uiView: view)
+            self.updateAndReturnChapters()
         }
         
         override func viewDidAppear(_ animated: Bool) {
          
-         super.viewDidAppear(true)
-            
-         self.updateAndReturnChapters()
-         ActivityIndicator.shared.showProgressView(uiView: view)
-         
-         
+            super.viewDidAppear(true)
          }
         
         override func didReceiveMemoryWarning() {
@@ -70,20 +64,19 @@ class ListOfChatpersTableViewController: UITableViewController {
             let height = CGFloat(integerLiteral: 106)
             return height
         }
+    
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
             let currentChapter: chapter = chapters[indexPath.row]
             
-            let gitaNavigationScreen = UIStoryboard.GitaNavigationScreen()
-            let chapterVersesScreen = UIStoryboard.ChapterVersesListScreen() as! ChapterVersesTableViewController
+            let verseNavigationScreen = UIStoryboard.verseListNavigationScreen()
+            let chapterVersesScreen = verseNavigationScreen.topViewController as! ChapterVersesTableViewController
             chapterVersesScreen.chapter = currentChapter.name!
             chapterVersesScreen.offset = currentChapter.from!
             chapterVersesScreen.to = currentChapter.to!
             chapterVersesScreen.updateChapterContent(From: (currentChapter.from)!, To: (currentChapter.to)!)
-           
-            present(gitaNavigationScreen, animated: false) {
-                gitaNavigationScreen.pushViewController(chapterVersesScreen, animated: true)
-            }
             
+            UIApplication.topViewController()?.present(verseNavigationScreen, animated: true)
             
             
         }
@@ -94,7 +87,8 @@ class ListOfChatpersTableViewController: UITableViewController {
         func updateAndReturnChapters(){
             
             ref = FIRDatabase.database().reference()
-            let vrindavan_head = ref.child("new_bgasitis").child("chapters").queryOrderedByKey().observe(.childAdded, with:  { (snapshot) in
+            let head = ref.child("new_bgasitis").child("chapters")
+            let handle = head.queryOrderedByKey().observe(.childAdded, with:  { (snapshot) in
                 
                 let output = snapshot.value as? NSDictionary
                 let name = output?["chapter"] as? String

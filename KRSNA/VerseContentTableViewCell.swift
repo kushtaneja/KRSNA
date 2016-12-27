@@ -1,18 +1,18 @@
 //
-//  ChapterVerseTableViewCell.swift
+//  VerseContentTableViewCell.swift
 //  KRSNA
 //
-//  Created by Kush Taneja on 18/12/16.
+//  Created by Kush Taneja on 24/12/16.
 //  Copyright © 2016 Kush Taneja. All rights reserved.
 //
 
 import UIKit
 
-class ChapterVerseTableViewCell: UITableViewCell {
-    @IBOutlet weak var verseHeadingLabel: UILabel!
+class VerseContentTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var verseTranlsationLabel: UILabel!
-    var verseNumber: Int?
+    @IBOutlet weak var verseCellTitleLabel: UILabel!
+    
+    @IBOutlet weak var verseCellContentLabel: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
