@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1524B5E7013E6DE0A301CB6B /* Pods_KRSNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC84CF006505303F613A88A /* Pods_KRSNA.framework */; };
 		431849761DF8B02400615C63 /* ReadStoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */; };
+		433C9A061E41C0E400B5D46E /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */; };
+		433C9A081E41C0F200B5D46E /* GalleryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */; };
+		433C9A0A1E41C0FF00B5D46E /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A091E41C0FF00B5D46E /* VideosTableViewController.swift */; };
+		433C9A0C1E41C10600B5D46E /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A0B1E41C10600B5D46E /* BooksTableViewController.swift */; };
+		433C9A0E1E41C12A00B5D46E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A0D1E41C12A00B5D46E /* LibraryViewController.swift */; };
 		433E17C31DF5EFF50079075D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C21DF5EFF50079075D /* Post.swift */; };
 		433E17C61DF5FA0F0079075D /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C41DF5FA0F0079075D /* ColorCode.swift */; };
 		433E17C71DF5FA0F0079075D /* ColorCodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E17C51DF5FA0F0079075D /* ColorCodeExtensions.swift */; };
@@ -32,6 +37,10 @@
 		436839571E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436839561E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift */; };
 		436B69881E05AEB100938B85 /* ChapterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B69871E05AEB100938B85 /* ChapterListTableViewCell.swift */; };
 		436B698B1E05B0DF00938B85 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B698A1E05B0DF00938B85 /* Chapter.swift */; };
+		436EC2861E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EC2851E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift */; };
+		436EC2881E487B0900C1EC4F /* MusicArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EC2871E487B0900C1EC4F /* MusicArtistTableViewCell.swift */; };
+		436EC28A1E487BE400C1EC4F /* MusicCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EC2891E487BE400C1EC4F /* MusicCategoryCollectionViewCell.swift */; };
+		436EC28D1E4880D100C1EC4F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EC28C1E4880D100C1EC4F /* Song.swift */; };
 		4385DD141DFD7AE50049B894 /* AllPostsDisplayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385DD131DFD7AE50049B894 /* AllPostsDisplayTableViewController.swift */; };
 		439166551DF624F500BC8D97 /* PostDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439166541DF624F500BC8D97 /* PostDisplayViewController.swift */; };
 		439166571DF64EE200BC8D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439166561DF64EE200BC8D97 /* Assets.xcassets */; };
@@ -53,6 +62,7 @@
 		43DAC3611E05855C004F9667 /* Gita_AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DAC3601E05855C004F9667 /* Gita_AboutViewController.swift */; };
 		43DB621C1E01C4DD00906BF6 /* NamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB621B1E01C4DD00906BF6 /* NamesCollectionViewController.swift */; };
 		43DB62201E01D2DD00906BF6 /* QuotesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB621F1E01D2DD00906BF6 /* QuotesCollectionViewController.swift */; };
+		43F7322F1E4D240D00439EFB /* AllArtistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7322E1E4D240D00439EFB /* AllArtistsTableViewController.swift */; };
 		9A5518D20395E5FC101F30DA /* Pods_KRSNATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69FFB0F33E8946CBD5114C4 /* Pods_KRSNATests.framework */; };
 		FDAB39C2CB11D999EFD14F13 /* Pods_KRSNAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46F2112AEF0D95694D80BBD /* Pods_KRSNAUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +88,11 @@
 		1CC7C10222A06087D54E72B2 /* Pods-KRSNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.release.xcconfig"; sourceTree = "<group>"; };
 		299F3282634495017D811380 /* Pods-KRSNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.debug.xcconfig"; sourceTree = "<group>"; };
 		431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadStoriesTableViewCell.swift; sourceTree = "<group>"; };
+		433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
+		433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewController.swift; sourceTree = "<group>"; };
+		433C9A091E41C0FF00B5D46E /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
+		433C9A0B1E41C10600B5D46E /* BooksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
+		433C9A0D1E41C12A00B5D46E /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		433E17C21DF5EFF50079075D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		433E17C41DF5FA0F0079075D /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		433E17C51DF5FA0F0079075D /* ColorCodeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCodeExtensions.swift; sourceTree = "<group>"; };
@@ -100,6 +115,10 @@
 		436839561E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterVerseTableViewCell.swift; sourceTree = "<group>"; };
 		436B69871E05AEB100938B85 /* ChapterListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterListTableViewCell.swift; sourceTree = "<group>"; };
 		436B698A1E05B0DF00938B85 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		436EC2851E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		436EC2871E487B0900C1EC4F /* MusicArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicArtistTableViewCell.swift; sourceTree = "<group>"; };
+		436EC2891E487BE400C1EC4F /* MusicCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		436EC28C1E4880D100C1EC4F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		436F1BFE1DE9BE0800B4F2D4 /* KRSNA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KRSNA.entitlements; sourceTree = "<group>"; };
 		4385DD131DFD7AE50049B894 /* AllPostsDisplayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsDisplayTableViewController.swift; sourceTree = "<group>"; };
 		439166541DF624F500BC8D97 /* PostDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDisplayViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +145,7 @@
 		43DAC3601E05855C004F9667 /* Gita_AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gita_AboutViewController.swift; sourceTree = "<group>"; };
 		43DB621B1E01C4DD00906BF6 /* NamesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCollectionViewController.swift; sourceTree = "<group>"; };
 		43DB621F1E01D2DD00906BF6 /* QuotesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesCollectionViewController.swift; sourceTree = "<group>"; };
+		43F7322E1E4D240D00439EFB /* AllArtistsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllArtistsTableViewController.swift; sourceTree = "<group>"; };
 		45CFFD40B6D5733F5F457070 /* Pods-KRSNAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNAUITests/Pods-KRSNAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7A071772A021830826AF781 /* Pods-KRSNATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNATests/Pods-KRSNATests.release.xcconfig"; sourceTree = "<group>"; };
 		ACC84CF006505303F613A88A /* Pods_KRSNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRSNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,9 +221,23 @@
 			name = Modals;
 			sourceTree = "<group>";
 		};
+		433C9A041E41C0B500B5D46E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				433C9A0D1E41C12A00B5D46E /* LibraryViewController.swift */,
+				433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */,
+				433C9A0B1E41C10600B5D46E /* BooksTableViewController.swift */,
+				433C9A091E41C0FF00B5D46E /* VideosTableViewController.swift */,
+				433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */,
+				43F7322E1E4D240D00439EFB /* AllArtistsTableViewController.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		433E17C11DF5EFE30079075D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				436EC28B1E4880C500C1EC4F /* Music */,
 				436B69891E05B0BA00938B85 /* Chapters */,
 				43DAC34E1E057A75004F9667 /* Posts */,
 				433E17DD1DF6006B0079075D /* FetchData.swift */,
@@ -294,6 +328,8 @@
 				436839561E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift */,
 				435871821E0DEC8D00D348CB /* VerseContentTableViewCell.swift */,
 				431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */,
+				436EC2851E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift */,
+				436EC2871E487B0900C1EC4F /* MusicArtistTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -321,6 +357,14 @@
 				436839531E05C75E00DB7F6D /* Verses */,
 			);
 			name = Chapters;
+			sourceTree = "<group>";
+		};
+		436EC28B1E4880C500C1EC4F /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				436EC28C1E4880D100C1EC4F /* Song.swift */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 		4385DD151DFD910F0049B894 /* Stories */ = {
@@ -360,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				43941C111E006AA400A8E365 /* ImageCollectionViewCell.swift */,
+				436EC2891E487BE400C1EC4F /* MusicCategoryCollectionViewCell.swift */,
 				435871871E0DF1ED00D348CB /* ChapterVersesDisplayCollectionViewCell.swift */,
 			);
 			name = CollectionViewCells;
@@ -436,6 +481,7 @@
 			children = (
 				43DAC3501E057AAD004F9667 /* Gita */,
 				433E17DF1DF60BDE0079075D /* Krishna */,
+				433C9A041E41C0B500B5D46E /* Library */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -799,14 +845,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436EC2881E487B0900C1EC4F /* MusicArtistTableViewCell.swift in Sources */,
 				43DAC3541E057E57004F9667 /* ChapterVersesTableViewController.swift in Sources */,
 				435871861E0DF17000D348CB /* ChapterVersesDisplayCollectionViewController.swift in Sources */,
 				435CC30F1E054E4A0029CC25 /* Pods_KRSNA.framework in Sources */,
 				43C5D5C51DE99FC800F41854 /* AppDelegate.swift in Sources */,
+				433C9A0E1E41C12A00B5D46E /* LibraryViewController.swift in Sources */,
 				433E17C31DF5EFF50079075D /* Post.swift in Sources */,
 				435871831E0DEC8D00D348CB /* VerseContentTableViewCell.swift in Sources */,
 				43C5D5F51DE9A04E00F41854 /* StoriesTableViewController.swift in Sources */,
 				436839571E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift in Sources */,
+				436EC28D1E4880D100C1EC4F /* Song.swift in Sources */,
 				436B69881E05AEB100938B85 /* ChapterListTableViewCell.swift in Sources */,
 				435A80281DF2E87700ED983E /* LoginAndSignUpViewController.swift in Sources */,
 				433E17E71DF6154B0079075D /* StoriesTableViewCell.swift in Sources */,
@@ -814,20 +863,27 @@
 				433E17E51DF60C6C0079075D /* KrishnaViewController.swift in Sources */,
 				433E17C71DF5FA0F0079075D /* ColorCodeExtensions.swift in Sources */,
 				433E17D71DF5FAC40079075D /* ActivityIndicator.swift in Sources */,
+				436EC28A1E487BE400C1EC4F /* MusicCategoryCollectionViewCell.swift in Sources */,
+				436EC2861E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift in Sources */,
 				433E17C61DF5FA0F0079075D /* ColorCode.swift in Sources */,
 				4385DD141DFD7AE50049B894 /* AllPostsDisplayTableViewController.swift in Sources */,
 				43941C121E006AA400A8E365 /* ImageCollectionViewCell.swift in Sources */,
 				436B698B1E05B0DF00938B85 /* Chapter.swift in Sources */,
+				433C9A0A1E41C0FF00B5D46E /* VideosTableViewController.swift in Sources */,
 				43DAC35F1E058503004F9667 /* AtaGlanceCollectionViewController.swift in Sources */,
 				433E17CD1DF5FA610079075D /* CAPSPageMenu.swift in Sources */,
 				439166551DF624F500BC8D97 /* PostDisplayViewController.swift in Sources */,
+				433C9A0C1E41C10600B5D46E /* BooksTableViewController.swift in Sources */,
 				433E17D41DF5FAA80079075D /* Toast.swift in Sources */,
 				435871881E0DF1ED00D348CB /* ChapterVersesDisplayCollectionViewCell.swift in Sources */,
+				43F7322F1E4D240D00439EFB /* AllArtistsTableViewController.swift in Sources */,
 				43DB621C1E01C4DD00906BF6 /* NamesCollectionViewController.swift in Sources */,
 				436839551E05C77600DB7F6D /* Verse.swift in Sources */,
 				431849761DF8B02400615C63 /* ReadStoriesTableViewCell.swift in Sources */,
 				433E17CA1DF5FA400079075D /* Extensions.swift in Sources */,
 				433E17E31DF60C2A0079075D /* AboutTableViewController.swift in Sources */,
+				433C9A061E41C0E400B5D46E /* MusicTableViewController.swift in Sources */,
+				433C9A081E41C0F200B5D46E /* GalleryTableViewController.swift in Sources */,
 				43DAC3561E057E77004F9667 /* ChapterOverviewViewController.swift in Sources */,
 				433E17DE1DF6006B0079075D /* FetchData.swift in Sources */,
 				43DB62201E01D2DD00906BF6 /* QuotesCollectionViewController.swift in Sources */,
@@ -993,7 +1049,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JTK792GD3V;
 				INFOPLIST_FILE = KRSNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krsna.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1011,7 +1067,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = JTK792GD3V;
 				INFOPLIST_FILE = KRSNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krsna.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

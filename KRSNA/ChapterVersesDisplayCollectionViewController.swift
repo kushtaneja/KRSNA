@@ -28,7 +28,11 @@ class ChapterVersesDisplayCollectionViewController: UICollectionViewController,U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView?.prefetchDataSource = self
+        if #available(iOS 10.0, *) {
+            self.collectionView?.prefetchDataSource = self
+        } else {
+            // Fallback on earlier versions
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)

@@ -37,6 +37,10 @@ extension UIStoryboard {
     class func verseDisplayNavigationScreen()-> UINavigationController {
         return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "VersesDisplayNavigationController") as? UINavigationController)!
     }
+    class func allArtistScreen()->UINavigationController{
+    
+     return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "AllArtistsNavigationController") as? UINavigationController)!
+    }
     
 
     

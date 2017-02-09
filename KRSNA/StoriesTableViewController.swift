@@ -115,7 +115,6 @@ class StoriesTableViewController: UITableViewController {
             return 4
         }
         else {
-            
             return 0
         }
     }

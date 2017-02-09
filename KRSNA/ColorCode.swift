@@ -1,6 +1,6 @@
 //
 //  ColorCode.swift
-//  Mito
+//  KRSNA
 //
 //  Created by dotline on 27/07/16.
 //  Copyright © 2016 Arcturus. All rights reserved.
