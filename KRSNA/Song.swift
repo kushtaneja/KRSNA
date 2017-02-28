@@ -42,7 +42,7 @@ class Song{
 
 class SongClassifier{
     
-    var name:String?
+      var name:String?
       var imageUrl:String?
       var type:MusicType?
     

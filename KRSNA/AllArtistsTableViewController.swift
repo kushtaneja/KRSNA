@@ -18,9 +18,6 @@ class AllArtistsTableViewController: UITableViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     // MARK: - Table view data source
 
@@ -53,10 +50,23 @@ class AllArtistsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MusicArtistTableViewCell
+        
+        let songNavScreen = UIStoryboard.songListNavigationScreen()
+        let songListScreen = songNavScreen.topViewController as! SongsTableViewController
+        
+        songListScreen.type = MusicType.artist
+        songListScreen.typeTitle = cell.nameLabel.text!
+        songListScreen.typeName = "artist"
+        songListScreen.fromOuter = false
+        self.present(songNavScreen, animated: true, completion: nil)
+    }
     
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        UIApplication.topViewController()?.dismiss(animated: true, completion: nil)
     }
 
 }

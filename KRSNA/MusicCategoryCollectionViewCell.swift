@@ -13,4 +13,7 @@ class MusicCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryImageView: UIImageView!
     
     @IBOutlet weak var categoryNameLabel: UILabel!
+    
+    var type:MusicType?
 }
+

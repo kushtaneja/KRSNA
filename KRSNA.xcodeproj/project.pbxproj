@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1524B5E7013E6DE0A301CB6B /* Pods_KRSNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC84CF006505303F613A88A /* Pods_KRSNA.framework */; };
+		430C34101E64ACC30045E8F4 /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C340F1E64ACC30045E8F4 /* SongsTableViewController.swift */; };
+		430C34161E64AD6C0045E8F4 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C34151E64AD6C0045E8F4 /* SongTableViewCell.swift */; };
+		430C341B1E6550FB0045E8F4 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C341A1E6550FB0045E8F4 /* Video.swift */; };
 		431849761DF8B02400615C63 /* ReadStoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */; };
 		433C9A061E41C0E400B5D46E /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */; };
 		433C9A081E41C0F200B5D46E /* GalleryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */; };
@@ -87,6 +90,9 @@
 /* Begin PBXFileReference section */
 		1CC7C10222A06087D54E72B2 /* Pods-KRSNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.release.xcconfig"; sourceTree = "<group>"; };
 		299F3282634495017D811380 /* Pods-KRSNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRSNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRSNA/Pods-KRSNA.debug.xcconfig"; sourceTree = "<group>"; };
+		430C340F1E64ACC30045E8F4 /* SongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableViewController.swift; sourceTree = "<group>"; };
+		430C34151E64AD6C0045E8F4 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		430C341A1E6550FB0045E8F4 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadStoriesTableViewCell.swift; sourceTree = "<group>"; };
 		433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +199,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		430C34111E64ACF50045E8F4 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */,
+				43F7322E1E4D240D00439EFB /* AllArtistsTableViewController.swift */,
+				430C340F1E64ACC30045E8F4 /* SongsTableViewController.swift */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		430C34121E64AD150045E8F4 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				433C9A091E41C0FF00B5D46E /* VideosTableViewController.swift */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		430C34131E64AD1F0045E8F4 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				433C9A0B1E41C10600B5D46E /* BooksTableViewController.swift */,
+			);
+			name = Books;
+			sourceTree = "<group>";
+		};
+		430C34141E64AD250045E8F4 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */,
+			);
+			name = Gallery;
+			sourceTree = "<group>";
+		};
+		430C34171E64ADEA0045E8F4 /* Gita */ = {
+			isa = PBXGroup;
+			children = (
+				436B69871E05AEB100938B85 /* ChapterListTableViewCell.swift */,
+				436839561E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift */,
+				435871821E0DEC8D00D348CB /* VerseContentTableViewCell.swift */,
+			);
+			name = Gita;
+			sourceTree = "<group>";
+		};
+		430C34181E64ADEF0045E8F4 /* Krishna */ = {
+			isa = PBXGroup;
+			children = (
+				433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */,
+				431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */,
+			);
+			name = Krishna;
+			sourceTree = "<group>";
+		};
+		430C34191E64ADFB0045E8F4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				436EC2851E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift */,
+				436EC2871E487B0900C1EC4F /* MusicArtistTableViewCell.swift */,
+				430C34151E64AD6C0045E8F4 /* SongTableViewCell.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		432CDDAD1DF1CB4B0016C4F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +274,7 @@
 		432CDDAE1DF1CB580016C4F2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				439166541DF624F500BC8D97 /* PostDisplayViewController.swift */,
 				43DAC35D1E05837F004F9667 /* LoginAndSingUp */,
 				4385DD1B1DFDD44A0049B894 /* CollectionViewCells */,
 				433E17E81DF615520079075D /* TableViewCells */,
@@ -225,11 +295,10 @@
 			isa = PBXGroup;
 			children = (
 				433C9A0D1E41C12A00B5D46E /* LibraryViewController.swift */,
-				433C9A051E41C0E400B5D46E /* MusicTableViewController.swift */,
-				433C9A0B1E41C10600B5D46E /* BooksTableViewController.swift */,
-				433C9A091E41C0FF00B5D46E /* VideosTableViewController.swift */,
-				433C9A071E41C0F200B5D46E /* GalleryTableViewController.swift */,
-				43F7322E1E4D240D00439EFB /* AllArtistsTableViewController.swift */,
+				430C34111E64ACF50045E8F4 /* Music */,
+				430C34121E64AD150045E8F4 /* Video */,
+				430C34141E64AD250045E8F4 /* Gallery */,
+				430C34131E64AD1F0045E8F4 /* Books */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -323,13 +392,9 @@
 		433E17E81DF615520079075D /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				433E17E61DF6154B0079075D /* StoriesTableViewCell.swift */,
-				436B69871E05AEB100938B85 /* ChapterListTableViewCell.swift */,
-				436839561E05EF4F00DB7F6D /* ChapterVerseTableViewCell.swift */,
-				435871821E0DEC8D00D348CB /* VerseContentTableViewCell.swift */,
-				431849751DF8B02400615C63 /* ReadStoriesTableViewCell.swift */,
-				436EC2851E4877CC00C1EC4F /* MusicCategoryTableViewCell.swift */,
-				436EC2871E487B0900C1EC4F /* MusicArtistTableViewCell.swift */,
+				430C34181E64ADEF0045E8F4 /* Krishna */,
+				430C34171E64ADEA0045E8F4 /* Gita */,
+				430C34191E64ADFB0045E8F4 /* Library */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -363,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				436EC28C1E4880D100C1EC4F /* Song.swift */,
+				430C341A1E6550FB0045E8F4 /* Video.swift */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -471,7 +537,6 @@
 			isa = PBXGroup;
 			children = (
 				433E17C21DF5EFF50079075D /* Post.swift */,
-				439166541DF624F500BC8D97 /* PostDisplayViewController.swift */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -869,6 +934,7 @@
 				4385DD141DFD7AE50049B894 /* AllPostsDisplayTableViewController.swift in Sources */,
 				43941C121E006AA400A8E365 /* ImageCollectionViewCell.swift in Sources */,
 				436B698B1E05B0DF00938B85 /* Chapter.swift in Sources */,
+				430C34161E64AD6C0045E8F4 /* SongTableViewCell.swift in Sources */,
 				433C9A0A1E41C0FF00B5D46E /* VideosTableViewController.swift in Sources */,
 				43DAC35F1E058503004F9667 /* AtaGlanceCollectionViewController.swift in Sources */,
 				433E17CD1DF5FA610079075D /* CAPSPageMenu.swift in Sources */,
@@ -887,11 +953,13 @@
 				43DAC3561E057E77004F9667 /* ChapterOverviewViewController.swift in Sources */,
 				433E17DE1DF6006B0079075D /* FetchData.swift in Sources */,
 				43DB62201E01D2DD00906BF6 /* QuotesCollectionViewController.swift in Sources */,
+				430C34101E64ACC30045E8F4 /* SongsTableViewController.swift in Sources */,
 				43DAC3521E057AEB004F9667 /* ListOfChatpersTableViewController.swift in Sources */,
 				433E17D01DF5FA750079075D /* DeviceSizes.swift in Sources */,
 				43DAC3581E058334004F9667 /* GitaPageMenuViewController.swift in Sources */,
 				433E17D91DF5FACC0079075D /* Utils.swift in Sources */,
 				43DAC3611E05855C004F9667 /* Gita_AboutViewController.swift in Sources */,
+				430C341B1E6550FB0045E8F4 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

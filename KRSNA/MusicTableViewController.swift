@@ -19,6 +19,8 @@ class MusicTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.sectionHeaderHeight = CGFloat(integerLiteral: 0)
+        tableView.sectionFooterHeight = CGFloat(integerLiteral: 0)
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         self.insert()
@@ -31,7 +33,6 @@ class MusicTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
     
@@ -83,9 +84,10 @@ class MusicTableViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-    switch section {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        tableView.sectionHeaderHeight = CGFloat(integerLiteral: 30)
+        tableView.sectionFooterHeight = CGFloat(integerLiteral: 10)
+        switch section {
         case 0:
             return 1
         case 1:
@@ -95,7 +97,8 @@ class MusicTableViewController: UITableViewController {
             if count == 0 {
                 return 0
             }else{
-                return 4
+                ActivityIndicator.shared.hideProgressView()
+                return 6
             }
         default:
             return 0
@@ -124,7 +127,7 @@ class MusicTableViewController: UITableViewController {
         case 2:
             switch indexPath.row {
                 
-            case 0,1,2:
+            case 0,1,2,3,4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath) as! MusicArtistTableViewCell
                 let artist = self.types["artist"]?[indexPath.row]
                 cell.nameLabel.text = artist?.name
@@ -150,12 +153,28 @@ class MusicTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 2:
-            if indexPath.row == 3 {
+            if indexPath.row == 5 {
+                
                 let artistNavigationScreen = UIStoryboard.allArtistScreen()
                 let allArtistScreen = artistNavigationScreen.topViewController as! AllArtistsTableViewController
                 
                 allArtistScreen.artists = self.types["artist"]!
-                self.present(artistNavigationScreen, animated: true, completion: nil)
+                
+               UIApplication.topViewController()?.present(artistNavigationScreen, animated: true, completion: nil)
+            
+            }else{
+            
+                let cell = tableView.cellForRow(at: indexPath) as! MusicArtistTableViewCell
+                
+                let songNavScreen = UIStoryboard.songListNavigationScreen()
+                let songListScreen = songNavScreen.topViewController as! SongsTableViewController
+                
+                songListScreen.type = MusicType.artist
+                songListScreen.typeTitle = cell.nameLabel.text!
+                songListScreen.typeName = "artist"
+                songListScreen.fromOuter = true
+                UIApplication.topViewController()?.present(songNavScreen, animated: true, completion: nil)
+            
             
             }
         default:
@@ -170,7 +189,7 @@ class MusicTableViewController: UITableViewController {
             return height
         case 2:
             switch indexPath.row {
-            case 0,1,2:
+            case 0,1,2,3,4:
                 let height = CGFloat(integerLiteral: 60)
                 return height
             default:
@@ -224,7 +243,6 @@ class MusicTableViewController: UITableViewController {
            // debugPrint("******** \(type)")
             
             if type! == "category" {
-
                 self.types["category"]?.append(SongClassifier(classifierType: MusicType.category, classifierName: output?["name"] as? String, classifierImageUrl: output?["url"] as? String))
                 
             }else if type! == "genre" {
@@ -290,16 +308,45 @@ extension MusicTableViewController : UICollectionViewDelegateFlowLayout,UICollec
        
         if(isCategoryCollection){
             let category = self.types["category"]?[indexPath.row]
+            cell.type = MusicType.category
             cell.categoryImageView.sd_setImage(with: URL(string:(category?.imageUrl!)!)!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
             cell.categoryNameLabel.text = category?.name
             
         }else{
             let genre = self.types["genre"]?[indexPath.row]
+            cell.type = MusicType.genre
             cell.categoryImageView.sd_setImage(with: URL(string:(genre?.imageUrl!)!)!, placeholderImage: #imageLiteral(resourceName: "Rectangle"))
             cell.categoryNameLabel.text = genre?.name
         }
         cell.categoryImageView.clipsToBounds = true
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+            let cell = collectionView.cellForItem(at: indexPath) as! MusicCategoryCollectionViewCell
+        
+
+            
+            let songNavScreen = UIStoryboard.songListNavigationScreen()
+            let songListScreen = songNavScreen.topViewController as! SongsTableViewController
+            
+        
+            songListScreen.typeTitle = cell.categoryNameLabel.text!
+        
+            if (cell.type == .category){
+                songListScreen.type = MusicType.category
+                songListScreen.typeName = "category"
+                
+            }else if (cell.type == .genre){
+                songListScreen.type = MusicType.genre
+                songListScreen.typeName = "genre"
+        
+            }
+            songListScreen.fromOuter = true
+            
+            UIApplication.topViewController()?.present(songNavScreen, animated: true, completion: nil)
+            
+       
     }
     
     

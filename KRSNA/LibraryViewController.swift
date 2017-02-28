@@ -24,11 +24,11 @@ class LibraryViewController: UIViewController,CAPSPageMenuDelegate{
         controller = storyBoard.instantiateViewController(withIdentifier: "MusicTableViewController")
         controller.title = "Music"
         controllerArray.append(controller)
-        controller = storyBoard.instantiateViewController(withIdentifier: "GalleryTableViewController")
-        controller.title = "Gallery"
-        controllerArray.append(controller)
         controller = storyBoard.instantiateViewController(withIdentifier: "VideosTableViewController")
         controller.title = "Videos"
+        controllerArray.append(controller)
+        controller = storyBoard.instantiateViewController(withIdentifier: "GalleryTableViewController")
+        controller.title = "Gallery"
         controllerArray.append(controller)
         controller = storyBoard.instantiateViewController(withIdentifier: "BooksTableViewController")
         controller.title = "Books"

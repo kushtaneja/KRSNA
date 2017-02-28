@@ -42,6 +42,12 @@ extension UIStoryboard {
      return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "AllArtistsNavigationController") as? UINavigationController)!
     }
     
+    class func songListNavigationScreen()->UINavigationController{
+        
+        return (KRSNAMainStoryboard().instantiateViewController(withIdentifier: "SongsNavigationController") as? UINavigationController)!
+    }
+
+
 
     
     
